@@ -1,42 +1,78 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+const DEFAULT_CYCLES = 3;
 
 export default function Home() {
-  const [paddles, setPaddles] = useState<number>(0);
   const [startTime, setStartTime] = useState<number | null>(null);
-  const [ppm, setPPM] = useState<number>(0);
+  const [ppm, setPPM] = useState<number | null>(0);
+  const [cycles, setCycles] = useState<number>(DEFAULT_CYCLES);
+  const startCounting = () => {
+    setPPM(null);
+    setStartTime(Date.now());
+  };
 
-  const registerPaddle = () => {
-    const now = Date.now();
-    if (!startTime) {
-      setStartTime(now);
+  const stopCounting = () => {
+    if (startTime !== null) {
+      const elapsedTime = (Date.now() - startTime) / 1000;
+      const paddles = cycles;
+      setPPM((paddles / elapsedTime) * 60);
+      setStartTime(null);
     }
-    setPaddles((prev) => prev + 1);
   };
   const reset = () => {
-    setPaddles(0);
     setStartTime(null);
     setPPM(0);
   };
 
-  useEffect(() => {
-    if (paddles > 0 && startTime) {
-      const elapsedTime = (Date.now() - startTime) / 60000; // Minutes
-      setPPM(Math.round(paddles / elapsedTime));
-    }
-  }, [paddles, startTime]);
+  const cyclesOptions = [
+    {
+      label: "1 ciclo",
+      value: 1,
+    },
+    {
+      label: "2 ciclos",
+      value: 2,
+    },
+    {
+      label: "3 ciclos",
+      value: 3,
+    },
+    {
+      label: "4 ciclos",
+      value: 4,
+    },
+    {
+      label: "5 ciclos",
+      value: 5,
+    },
+  ];
 
   return (
     <div className="flex flex-col items-center justify-center h-screen gap-4 max-w-3xs w-full">
-      <p className="text-xl">Paladas: {paddles}</p>
+      <select
+        className="select select-bordered w-full max-w-xs"
+        onChange={(e) => setCycles(parseInt(e.target.value))}
+        defaultValue={DEFAULT_CYCLES}
+      >
+        {cyclesOptions.map((option, index) => (
+          <option key={`cicle-option-${index}`} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
       <p className="text-xl">
-        Paladas por Minuto: <b>{ppm} </b>
+        Paladas por Minuto: <b>{ppm?.toFixed(0)} </b>
       </p>
       <button
-        onClick={registerPaddle}
-        className="px-10 py-6 text-xl bg-sky-500/50 text-white rounded-lg shadow-md hover:bg-sky-600/60 w-full"
+        onClick={!startTime ? startCounting : stopCounting}
+        className={`px-10 py-12 text-xl ${
+          !startTime ? "bg-sky-500/50" : "bg-red-500/50"
+        } text-white rounded-lg shadow-md ${
+          !startTime ? "hover:bg-sky-600/60" : "hover:bg-red-600/60"
+        } w-full`}
       >
-        Registrar Paladas
+        {!startTime ? "Empezar" : "Parar"}
       </button>
       <button
         onClick={reset}

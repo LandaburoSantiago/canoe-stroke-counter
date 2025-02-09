@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Cuentapaladas",
   description: "Una aplicación para contar paladas por minuto",
+  manifest: "/manifest.json",
 };
 declare global {
   interface Window {
