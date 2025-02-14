@@ -37,6 +37,12 @@ export default function RootLayout({
         <div className="flex flex-col items-center justify-center h-screen gap-4 px-4 py-16">
           <h1 className="text-2xl font-bold">Cuenta Paladas</h1>
           {children}
+          <p>
+            Desarrollado por{" "}
+            <a href="https://santiagolandaburo.com/" target="__blank">
+              Santiago Landaburo
+            </a>
+          </p>
         </div>
       </body>
     </html>
