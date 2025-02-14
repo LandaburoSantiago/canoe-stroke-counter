@@ -37,7 +37,6 @@ export default function RootLayout({
         <div className="flex flex-col items-center justify-center h-screen gap-4 px-4 py-16">
           <h1 className="text-2xl font-bold">Cuenta Paladas</h1>
           {children}
-          <p className="italic text-xs text-white-600/50">pal boko por santi</p>
         </div>
       </body>
     </html>

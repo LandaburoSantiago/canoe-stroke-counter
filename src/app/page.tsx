@@ -50,8 +50,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen gap-4 max-w-3xs w-full">
+      <p className="text-xl mb-4">
+        Paladas por Minuto: <b>{ppm?.toFixed(0)} </b>
+      </p>
+
       <select
-        className="select select-bordered w-full max-w-xs"
+        className="select select-bordered w-full"
         onChange={(e) => setCycles(parseInt(e.target.value))}
         defaultValue={DEFAULT_CYCLES}
       >
@@ -61,9 +65,6 @@ export default function Home() {
           </option>
         ))}
       </select>
-      <p className="text-xl">
-        Paladas por Minuto: <b>{ppm?.toFixed(0)} </b>
-      </p>
       <button
         onClick={!startTime ? startCounting : stopCounting}
         className={`px-10 py-12 text-xl ${
@@ -76,7 +77,7 @@ export default function Home() {
       </button>
       <button
         onClick={reset}
-        className="px-4 py-2 bg-transparent text-white rounded-lg shadow-md border border-solid border-white w-full"
+        className="px-4 py-2 bg-transparent dark:text-white rounded-lg shadow-md border border-solid light:border-black dark:border-white w-full"
       >
         Reiniciar
       </button>
