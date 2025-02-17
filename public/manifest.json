@@ -3,6 +3,7 @@
     "short_name": "Cuenta Paladas",
     "description": "App para calcular paladas por minuto de un palista",
     "start_url": "/",
+    "scope":"/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
@@ -16,6 +17,21 @@
         "src": "/icon-512x512.png",
         "sizes": "512x512",
         "type": "image/png"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshot.jpg",
+        "sizes": "491x921",
+        "type": "image/jpg",
+        "label": "Cuenta paladas"
+      },
+      {
+        "src": "/screenshot2.jpg",
+        "sizes": "1372x808",
+        "type": "image/jpg",
+        "form_factor": "wide",
+        "label": "Cuenta paladas"
       }
     ]
   }
