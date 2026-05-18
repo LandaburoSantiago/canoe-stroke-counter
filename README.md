@@ -31,3 +31,6 @@ This project reinforced the importance of building focused products around real 
 ## Status
 
 Personal project currently used in real training sessions.
+
+## URL
+https://cuentapaladas.vercel.app/
