@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Canoe Stroke Counter
 
-## Getting Started
+A mobile-first PWA designed to help canoe coaches track athlete stroke rate during training sessions in a simple and practical way.
 
-First, run the development server:
+## About the Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project was created to solve a real-world need from a canoe coach who required a fast and accessible way to count strokes during training sessions directly from a mobile device.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application was designed with a mobile-first approach, prioritizing speed, simplicity, and ease of use during live training situations. The coach still uses the app today as part of their training workflow.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Beyond the technical implementation, this project helped me better understand how small focused products can deliver real value when they are built around practical user needs.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- Real-time stroke counting
+- Mobile-first user experience
+- Progressive Web App (PWA)
+- Fast interaction flow
+- Simple and lightweight interface
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- React
+- TypeScript
+- Progressive Web App (PWA)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## What I Learned
 
-## Deploy on Vercel
+This project reinforced the importance of building focused products around real user problems. It also gave me practical experience designing lightweight mobile-first interfaces and delivering fast user interactions in a sports training context.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Personal project currently used in real training sessions.
