@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Geist } from "next/font/google";
 import "./globals.css";
+import Icon from "./components/Icon";
 import ServiceWorker from "./components/ServiceWorker";
 import { GoogleTagManager } from "@next/third-parties/google";
 
@@ -9,15 +10,23 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const viewport: Viewport = {
+  themeColor: "#f5f7fa",
+};
 
 export const metadata: Metadata = {
   title: "Cuentapaladas",
   description: "Una aplicación para contar paladas por minuto",
   manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=regata-2", sizes: "16x16 32x32 48x48", type: "image/x-icon" },
+      { url: "/icon.svg?v=regata-2", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png?v=regata-2", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png?v=regata-2", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png?v=regata-2", sizes: "180x180", type: "image/png" }],
+  },
 };
 declare global {
   interface Window {
@@ -34,19 +43,18 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} antialiased`}
       >
         <GoogleTagManager gtmId="GTM-5T77TCGN" />
         <ServiceWorker />
-        <div className="flex flex-col items-center justify-center h-screen gap-4 px-4 py-16">
-          <h1 className="text-2xl font-bold">Cuenta Paladas</h1>
+        <div className="app-shell">
+          <header className="app-header">
+            <div className="brand"><span className="brand-mark"><Icon name="paddle" /></span><span>Cuenta Paladas</span></div>
+          </header>
           {children}
-          <p>
-            Desarrollado por{" "}
-            <a href="https://santiagolandaburo.com/" target="__blank">
-              Santiago Landaburo
-            </a>
-          </p>
+          <footer className="app-footer">
+            Desarrollado por <a href="https://santiagolandaburo.com/" target="_blank" rel="noopener noreferrer">Santiago Landaburo</a>
+          </footer>
         </div>
       </body>
     </html>
