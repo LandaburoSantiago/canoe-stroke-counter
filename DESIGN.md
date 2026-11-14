@@ -86,18 +86,12 @@ components:
     padding: "12px 8px"
     height: "52px"
     width: "100%"
-  cycle-picker:
+  cycle-select:
     backgroundColor: "{colors.surface}"
-    rounded: "{rounded.main}"
-    padding: "16px"
-  cycle-option:
-    backgroundColor: "{colors.background}"
     textColor: "{colors.foreground}"
     rounded: "{rounded.small}"
-    height: "52px"
-  cycle-option-selected:
-    backgroundColor: "{colors.accent}"
-    textColor: "{colors.surface}"
+    padding: "8px 12px"
+    height: "48px"
   stopwatch-disclosure:
     textColor: "{colors.foreground}"
     rounded: "6px"
@@ -124,7 +118,7 @@ La escala nace del uso con una mano y de mirar la pantalla de reojo. Los número
 - Fondo claro frío y tinta azul de alto contraste.
 - Cifras tabulares y resultado dominante.
 - Controles táctiles amplios, redondeados y sin sombras.
-- Naranja para iniciar y seleccionar; rojo oscuro para parar.
+- Naranja para iniciar; rojo oscuro para parar.
 - Animación breve de estado con respeto por movimiento reducido.
 
 ## Colors
@@ -132,7 +126,7 @@ La escala nace del uso con una mano y de mirar la pantalla de reojo. Los número
 Una paleta restringida de papel frío, tinta azul y naranja cálido; los valores normativos están en el frontmatter y se corresponden con la hoja de estilos global.
 
 ### Primary
-- **Naranja de salida — accent:** inicio de medición y ciclo seleccionado; texto blanco sobre el relleno.
+- **Naranja de salida — accent:** inicio de medición; texto blanco sobre el relleno.
 - **Naranja profundo — accent-hover:** respuesta de hover de la acción principal.
 
 ### Secondary
@@ -140,15 +134,15 @@ Una paleta restringida de papel frío, tinta azul y naranja cálido; los valores
 - **Azul de foco — focus:** contorno de foco visible, separado del color de selección.
 
 ### Neutral
-- **Papel frío — background:** lienzo de la página, opciones sin seleccionar y cabecera de vueltas.
+- **Papel frío — background:** lienzo de la página, selector deshabilitado y cabecera de vueltas.
 - **Tinta azul — foreground:** títulos, cifras y texto principal.
-- **Blanco de control — surface:** grupo de ciclos y botones secundarios; texto de acciones con relleno intenso.
+- **Blanco de control — surface:** selector de ciclos y botones secundarios; texto de acciones con relleno intenso.
 - **Azul gris — muted:** unidades, instrucciones, estados y encabezados de tabla.
 - **Línea fría — border:** divisores y bordes de controles secundarios.
 - **Tinta deshabilitada — disabled:** acciones de reinicio y cronómetro sin disponibilidad.
 - **Baño frío — quiet-hover:** hover compartido por las acciones de reinicio.
 
-**The State Color Rule.** El naranja identifica inicio o selección; el rojo identifica la medición en curso y su acción de parada. Acompañar siempre el color con texto o forma de estado.
+**The State Color Rule.** El naranja identifica inicio; el rojo identifica la medición en curso y su acción de parada. Acompañar siempre el color con texto o forma de estado.
 
 ## Typography
 
@@ -170,19 +164,19 @@ Una paleta restringida de papel frío, tinta azul y naranja cálido; los valores
 
 Una columna centrada con ancho máximo (524px). Los márgenes internos son (24px), pasan a (32px) desde (768px) de ancho y a (16px) por debajo de (360px). La cabecera y los divisores definen el marco; el escritorio conserva la misma escala de herramienta.
 
-El ritmo reutiliza pasos de (8px), (12px), (16px), (24px) y (32px). Los ciclos forman cinco columnas iguales, con separación (8px); las acciones del cronómetro forman dos columnas con separación (12px). Los controles mantienen su altura táctil al reducir el ancho.
+El ritmo reutiliza pasos de (8px), (12px), (16px), (24px) y (32px). La configuración de ciclos ocupa una fila compacta debajo de las acciones de medición: etiqueta a la izquierda y selector nativo a la derecha. Las acciones del cronómetro forman dos columnas con separación (12px). Los controles mantienen su altura táctil al reducir el ancho.
 
 En pantallas de hasta (740px) de alto y menos de (768px) de ancho, se compactan cabecera, separación superior y resultado. El historial de vueltas tiene altura máxima (272px), desplazamiento propio y encabezado fijo. El pie reserva el margen inferior seguro del dispositivo.
 
 ## Elevation & Depth
 
-No hay sombras. La profundidad se comunica con blanco sobre papel frío, cambios de relleno en interacción y líneas finas entre secciones. El foco visible usa contorno azul (3px) con separación (4px); las opciones de ciclo usan separación (3px).
+No hay sombras. La profundidad se comunica con blanco sobre papel frío, cambios de relleno en interacción y líneas finas entre secciones. El foco visible usa contorno azul (3px) con separación (4px), incluido el selector de ciclos.
 
 **The Flat Surface Rule.** Separar con tono, espacio o línea; mantener los controles y grupos planos.
 
 ## Shapes
 
-El radio principal reúne el grupo de ciclos y la acción de medición. Los controles menores alternan radios pequeños y medianos del frontmatter. Los botones de ciclo tienen borde transparente (2px) que permite mostrar hover sin cambiar su tamaño; los botones secundarios usan borde (1px).
+El radio principal define la acción de medición. Los controles menores alternan radios pequeños y medianos del frontmatter. El selector de ciclos y los botones secundarios usan borde (1px).
 
 Los iconos son SVG de trazo redondeado (1.8px), normalmente de (24px), reducidos en acciones secundarias. El indicador de estado es un punto (7px) que pasa a cuadrado suave durante la medición, reforzando el cambio de texto y color.
 
@@ -197,9 +191,9 @@ Acciones amplias y explícitas. La medición tiene la mayor altura mínima del s
 - **Reset:** acción plana de ancho completo, peso (500); el hover agrega el baño frío. La disponibilidad se expresa con tinta deshabilitada y semántica disabled.
 - **Focus / Motion:** todos muestran foco visible. La acción principal cambia su fondo en (150ms ease-out); movimiento reducido elimina transiciones y animaciones.
 
-### Cycle Picker
+### Cycle Selector
 
-Un grupo blanco compacto de radios nativos con etiquetas visibles. Cinco áreas iguales, una sola selección naranja y foco sobre el área visible. Durante la medición se bloquea el grupo: las opciones no seleccionadas bajan de opacidad, la elegida conserva su intensidad.
+Una fila secundaria debajo del reinicio, sin tarjeta ni acento naranja. La etiqueta «Ciclos a medir» acompaña un selector nativo de 1 a 5 ciclos, con 3 predeterminados y altura táctil mínima de (48px). El texto del selector usa (1rem) para evitar zoom automático en móviles. La cantidad elegida también aparece en la instrucción junto a la acción principal. Durante la medición se bloquea el selector; conserva el valor al reiniciar y entre mediciones de la sesión actual.
 
 ### Measurement Readout
 

@@ -54,17 +54,6 @@ export default function Home() {
           </p>
         </div>
 
-        <fieldset className="cycle-picker" disabled={measuring} aria-describedby="measurement-help">
-          <legend>Ciclos a medir</legend>
-          <div className="cycle-options">
-            {[1, 2, 3, 4, 5].map((value) => (
-              <label key={value} className="cycle-option">
-                <input type="radio" name="cycles" value={value} checked={cycles === value} onChange={() => setCycles(value)} aria-label={`${value} ${value === 1 ? "ciclo" : "ciclos"}`} />
-                <span>{value}</span>
-              </label>
-            ))}
-          </div>
-        </fieldset>
         <p id="measurement-help" className="measurement-help">
           {measuring ? `Contá ${cycles} ${cycles === 1 ? "ciclo" : "ciclos"} y tocá parar.` : `Tocá empezar, contá ${cycles} ${cycles === 1 ? "ciclo" : "ciclos"} y tocá parar.`}
         </p>
@@ -77,6 +66,14 @@ export default function Home() {
         <button type="button" onClick={reset} disabled={!measuring && ppm === null && !error} className="reset-measurement">
           <Icon name="reset" /> Reiniciar medición
         </button>
+        <div className="cycle-setting">
+          <label htmlFor="cycles">Ciclos a medir</label>
+          <select id="cycles" name="cycles" value={cycles} onChange={(event) => setCycles(Number(event.target.value))} disabled={measuring} aria-describedby="measurement-help" className="cycle-select">
+            {[1, 2, 3, 4, 5].map((value) => (
+              <option key={value} value={value}>{value} {value === 1 ? "ciclo" : "ciclos"}</option>
+            ))}
+          </select>
+        </div>
       </section>
       <Stopwatch />
     </main>
