@@ -19,8 +19,8 @@ Beyond the technical implementation, this project helped me better understand ho
 - Simple and lightweight interface
 - Independent stopwatch with pause/resume and lap recording (split and total times)
 
-The stroke counter remains the main control, with one-tap cycle selection and a large
-start/stop button. Cycle selection is locked during a measurement. The interface
+The stroke counter remains the main control, with a large start/stop button and a
+compact cycle selector below the measurement actions. Cycle selection is locked during a measurement. The interface
 prioritizes one-handed use and a clear, high-contrast light theme.
 
 Expand the stopwatch row below the counter to access its independent controls:

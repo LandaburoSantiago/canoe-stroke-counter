@@ -15,9 +15,9 @@ THESIS: una herramienta de medición para mirar de reojo desde una lancha; una t
 
 OWN-WORLD: Hoja de regata. Fondo claro frío, tinta azul y naranja para iniciar; sans de interfaz, cifras tabulares, superficies sin textura y controles táctiles definidos. Luz natural en el agua motiva el tema claro de alto contraste.
 
-STORY: elegir ciclos, empezar, observar al palista, parar y leer paladas/min. El cronómetro se despliega de forma independiente. El resultado y el estado cambian juntos en un lugar fijo: la firma de interacción es la sustitución estable del estado de medición, con énfasis breve al obtener resultado.
+STORY: empezar, observar al palista, parar y leer paladas/min. Los ciclos se configuran ocasionalmente en una fila secundaria debajo de las acciones; la instrucción mantiene visible la cantidad elegida. El cronómetro se despliega de forma independiente. El resultado y el estado cambian juntos en un lugar fijo: la firma de interacción es la sustitución estable del estado de medición, con énfasis breve al obtener resultado.
 
-FIRST VIEWPORT: cabecera compacta, título del contador, resultado central grande con unidad, cinco ciclos en una fila, instrucción breve y botón naranja de 100px al alcance del pulgar. Reinicio secundario separado y fila plegable del cronómetro al pie. En desktop la misma herramienta centrada, sin inflar datos.
+FIRST VIEWPORT: cabecera compacta, título del contador, resultado central grande con unidad, instrucción breve y botón naranja de 100px al alcance del pulgar. Reinicio secundario, configuración compacta de ciclos con selector nativo sin acento de color y fila plegable del cronómetro al pie. En desktop la misma herramienta centrada, sin inflar datos.
 
 FORM: planillas de resultados de regata, candidato propio #1 elegido por el usuario en lugar del asignado #5. seed:be157347fa3ac047. Paleta restringida, cifras de medición y controles web estándar; motion breve de estado, respetando reduced-motion.
 
