@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-14T02:17:47.615691Z",
+  "title": "Design System: Cuenta Paladas",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Papel frío",
+        "canonical": "#f5f7fa",
+        "tonalRamp": [
+          "oklch(0.15 0.0014 258.32)",
+          "oklch(0.26 0.0025 258.32)",
+          "oklch(0.38 0.0036 258.32)",
+          "oklch(0.50 0.0045 258.32)",
+          "oklch(0.62 0.0045 258.32)",
+          "oklch(0.74 0.0039 258.32)",
+          "oklch(0.86 0.0025 258.32)",
+          "oklch(0.95 0.0009 258.32)"
+        ]
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "Tinta azul",
+        "canonical": "#102542",
+        "tonalRamp": [
+          "oklch(0.15 0.0183 256.95)",
+          "oklch(0.26 0.0335 256.95)",
+          "oklch(0.38 0.0487 256.95)",
+          "oklch(0.50 0.0609 256.95)",
+          "oklch(0.62 0.0609 256.95)",
+          "oklch(0.74 0.0518 256.95)",
+          "oklch(0.86 0.0335 256.95)",
+          "oklch(0.95 0.0122 256.95)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Blanco de control",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(0.15 0.0000 0.00)",
+          "oklch(0.26 0.0000 0.00)",
+          "oklch(0.38 0.0000 0.00)",
+          "oklch(0.50 0.0000 0.00)",
+          "oklch(0.62 0.0000 0.00)",
+          "oklch(0.74 0.0000 0.00)",
+          "oklch(0.86 0.0000 0.00)",
+          "oklch(0.95 0.0000 0.00)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Azul gris",
+        "canonical": "#526278",
+        "tonalRamp": [
+          "oklch(0.15 0.0122 256.42)",
+          "oklch(0.26 0.0223 256.42)",
+          "oklch(0.38 0.0324 256.42)",
+          "oklch(0.50 0.0405 256.42)",
+          "oklch(0.62 0.0405 256.42)",
+          "oklch(0.74 0.0345 256.42)",
+          "oklch(0.86 0.0223 256.42)",
+          "oklch(0.95 0.0081 256.42)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Línea fría",
+        "canonical": "#cbd4e0",
+        "tonalRamp": [
+          "oklch(0.15 0.0058 255.54)",
+          "oklch(0.26 0.0106 255.54)",
+          "oklch(0.38 0.0154 255.54)",
+          "oklch(0.50 0.0193 255.54)",
+          "oklch(0.62 0.0193 255.54)",
+          "oklch(0.74 0.0164 255.54)",
+          "oklch(0.86 0.0106 255.54)",
+          "oklch(0.95 0.0039 255.54)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Naranja de salida",
+        "canonical": "#cc4c1a",
+        "tonalRamp": [
+          "oklch(0.15 0.0518 39.10)",
+          "oklch(0.26 0.0950 39.10)",
+          "oklch(0.38 0.1382 39.10)",
+          "oklch(0.50 0.1727 39.10)",
+          "oklch(0.62 0.1727 39.10)",
+          "oklch(0.74 0.1468 39.10)",
+          "oklch(0.86 0.0950 39.10)",
+          "oklch(0.95 0.0345 39.10)"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Naranja profundo",
+        "canonical": "#b23d11",
+        "tonalRamp": [
+          "oklch(0.15 0.0481 38.18)",
+          "oklch(0.26 0.0882 38.18)",
+          "oklch(0.38 0.1283 38.18)",
+          "oklch(0.50 0.1604 38.18)",
+          "oklch(0.62 0.1604 38.18)",
+          "oklch(0.74 0.1364 38.18)",
+          "oklch(0.86 0.0882 38.18)",
+          "oklch(0.95 0.0321 38.18)"
+        ]
+      },
+      "stop": {
+        "role": "secondary",
+        "displayName": "Rojo de parada",
+        "canonical": "#9f302b",
+        "tonalRamp": [
+          "oklch(0.15 0.0443 26.89)",
+          "oklch(0.26 0.0812 26.89)",
+          "oklch(0.38 0.1181 26.89)",
+          "oklch(0.50 0.1476 26.89)",
+          "oklch(0.62 0.1476 26.89)",
+          "oklch(0.74 0.1254 26.89)",
+          "oklch(0.86 0.0812 26.89)",
+          "oklch(0.95 0.0295 26.89)"
+        ]
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Azul de foco",
+        "canonical": "#174bc8",
+        "tonalRamp": [
+          "oklch(0.15 0.0605 263.41)",
+          "oklch(0.26 0.1109 263.41)",
+          "oklch(0.38 0.1613 263.41)",
+          "oklch(0.50 0.2016 263.41)",
+          "oklch(0.62 0.2016 263.41)",
+          "oklch(0.74 0.1714 263.41)",
+          "oklch(0.86 0.1109 263.41)",
+          "oklch(0.95 0.0403 263.41)"
+        ]
+      },
+      "disabled": {
+        "role": "neutral",
+        "displayName": "Tinta deshabilitada",
+        "canonical": "#707d8f",
+        "tonalRamp": [
+          "oklch(0.15 0.0095 256.54)",
+          "oklch(0.26 0.0174 256.54)",
+          "oklch(0.38 0.0253 256.54)",
+          "oklch(0.50 0.0317 256.54)",
+          "oklch(0.62 0.0317 256.54)",
+          "oklch(0.74 0.0269 256.54)",
+          "oklch(0.86 0.0174 256.54)",
+          "oklch(0.95 0.0063 256.54)"
+        ]
+      },
+      "quiet-hover": {
+        "role": "neutral",
+        "displayName": "Baño frío",
+        "canonical": "#e5ebf3",
+        "tonalRamp": [
+          "oklch(0.15 0.0038 255.51)",
+          "oklch(0.26 0.0069 255.51)",
+          "oklch(0.38 0.0101 255.51)",
+          "oklch(0.50 0.0126 255.51)",
+          "oklch(0.62 0.0126 255.51)",
+          "oklch(0.74 0.0107 255.51)",
+          "oklch(0.86 0.0069 255.51)",
+          "oklch(0.95 0.0025 255.51)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Resultado",
+        "purpose": "Resultado principal de paladas por minuto; cifras tabulares."
+      },
+      "title": {
+        "displayName": "Título",
+        "purpose": "Título de la herramienta."
+      },
+      "body": {
+        "displayName": "Interfaz",
+        "purpose": "Texto base y apertura del cronómetro."
+      },
+      "label": {
+        "displayName": "Etiqueta",
+        "purpose": "Estados, leyendas y controles secundarios."
+      },
+      "helper": {
+        "displayName": "Ayuda",
+        "purpose": "Instrucciones y tabla de vueltas."
+      },
+      "action": {
+        "displayName": "Acción principal",
+        "purpose": "Empezar o parar medición."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "measure-background",
+        "value": "background-color 150ms ease-out",
+        "purpose": "Respuesta de fondo de la acción principal."
+      },
+      {
+        "name": "result-arrives",
+        "value": "220ms ease-out",
+        "purpose": "Cambio de color del resultado, de accent a foreground, sin desplazamiento."
+      },
+      {
+        "name": "disclosure-chevron",
+        "value": "transform 180ms ease-out",
+        "purpose": "Giro de 90 grados de la flecha al abrir el cronómetro."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }",
+        "purpose": "Eliminar animaciones y transiciones cuando se solicita movimiento reducido."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "desktop",
+        "value": "(min-width: 768px)"
+      },
+      {
+        "name": "narrow",
+        "value": "(max-width: 359px)"
+      },
+      {
+        "name": "compact-height",
+        "value": "(max-height: 740px) and (max-width: 767px)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Empezar medición",
+      "kind": "button",
+      "refersTo": "button-measure",
+      "description": "Acción principal en reposo, de ancho completo y altura mínima amplia.",
+      "html": "<button type=\"button\" class=\"ds-measure\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m9 5 11 7-11 7z\"/></svg>Empezar medición</button>",
+      "css": ".ds-measure {font-family: var(--font-geist-sans, Arial), sans-serif; line-height: 1.5;display:flex; align-items:center; justify-content:center; gap:12px; width:100%; min-height:100px; padding:20px 12px; border:0; border-radius:var(--radius, 14px); background:var(--accent, #cc4c1a); color:var(--surface, #ffffff); font-size:1.5rem; font-weight:650; cursor:pointer; touch-action:manipulation; transition:background-color 150ms ease-out;} .ds-measure svg {flex-shrink:0;} .ds-measure:hover {background:var(--accent-hover, #b23d11);} .ds-measure:active {background:#96310b;} .ds-measure:focus-visible {outline: 3px solid var(--focus, #174bc8); outline-offset: 4px;} .ds-measure.ds-measuring {background:var(--stop, #9f302b);} .ds-measure.ds-measuring:hover {background:#842722;} .ds-measure.ds-measuring:active {background:#6c201c;} @media (max-width:359px) {.ds-measure {font-size:1.25rem;}} @media (prefers-reduced-motion:reduce) {.ds-measure {transition:none;}}"
+    },
+    {
+      "name": "Parar medición",
+      "kind": "button",
+      "refersTo": "button-stop",
+      "description": "La misma acción principal durante una medición; cambia texto, icono y relleno.",
+      "html": "<button type=\"button\" class=\"ds-measure ds-measuring\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"6\" y=\"6\" width=\"12\" height=\"12\" rx=\"1\"/></svg>Parar medición</button>",
+      "css": ".ds-measure {font-family: var(--font-geist-sans, Arial), sans-serif; line-height: 1.5;display:flex; align-items:center; justify-content:center; gap:12px; width:100%; min-height:100px; padding:20px 12px; border:0; border-radius:var(--radius, 14px); background:var(--accent, #cc4c1a); color:var(--surface, #ffffff); font-size:1.5rem; font-weight:650; cursor:pointer; touch-action:manipulation; transition:background-color 150ms ease-out;} .ds-measure svg {flex-shrink:0;} .ds-measure:hover {background:var(--accent-hover, #b23d11);} .ds-measure:active {background:#96310b;} .ds-measure:focus-visible {outline: 3px solid var(--focus, #174bc8); outline-offset: 4px;} .ds-measure.ds-measuring {background:var(--stop, #9f302b);} .ds-measure.ds-measuring:hover {background:#842722;} .ds-measure.ds-measuring:active {background:#6c201c;} @media (max-width:359px) {.ds-measure {font-size:1.25rem;}} @media (prefers-reduced-motion:reduce) {.ds-measure {transition:none;}}"
+    },
+    {
+      "name": "Reiniciar medición",
+      "kind": "button",
+      "refersTo": "button-reset",
+      "description": "Acción plana compartida por los reinicios de medición y cronómetro.",
+      "html": "<button type=\"button\" class=\"ds-reset\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 10a9 9 0 1 1 2 8M3 4v6h6\"/></svg>Reiniciar medición</button>",
+      "css": ".ds-reset {font-family: var(--font-geist-sans, Arial), sans-serif; line-height: 1.5;display:flex; align-items:center; justify-content:center; gap:8px; width:100%; min-height:52px; padding:12px 8px; border:0; border-radius:8px; color:var(--foreground, #102542); background:transparent; font-size:.9375rem; font-weight:500; cursor:pointer; touch-action:manipulation;} .ds-reset svg {width:18px; height:18px; flex-shrink:0;} .ds-reset:hover:not(:disabled) {background:#e5ebf3;} .ds-reset:disabled {color:#707d8f; cursor:not-allowed;} .ds-reset:focus-visible {outline: 3px solid var(--focus, #174bc8); outline-offset: 4px;}"
+    },
+    {
+      "name": "Ciclos a medir",
+      "kind": "input",
+      "refersTo": "cycle-picker",
+      "description": "Radios nativos en cinco columnas; selección inicial real de tres ciclos.",
+      "html": "<fieldset class=\"ds-cycle-picker\"><legend>Ciclos a medir</legend><div class=\"ds-cycle-options\"><label class=\"ds-cycle-option\"><input type=\"radio\" name=\"ds-cycles\" value=\"1\" aria-label=\"1 ciclo\"><span>1</span></label><label class=\"ds-cycle-option\"><input type=\"radio\" name=\"ds-cycles\" value=\"2\" aria-label=\"2 ciclos\"><span>2</span></label><label class=\"ds-cycle-option\"><input type=\"radio\" name=\"ds-cycles\" value=\"3\" aria-label=\"3 ciclos\" checked><span>3</span></label><label class=\"ds-cycle-option\"><input type=\"radio\" name=\"ds-cycles\" value=\"4\" aria-label=\"4 ciclos\"><span>4</span></label><label class=\"ds-cycle-option\"><input type=\"radio\" name=\"ds-cycles\" value=\"5\" aria-label=\"5 ciclos\"><span>5</span></label></div></fieldset>",
+      "css": ".ds-cycle-picker {font-family: var(--font-geist-sans, Arial), sans-serif; line-height: 1.5;min-width:0; margin:0; padding:16px; border:0; background:var(--surface, #ffffff); color:var(--foreground, #102542); border-radius:var(--radius, 14px);} .ds-cycle-picker legend {float:left; width:100%; margin-bottom:12px; padding:0; font-size:.9375rem; font-weight:550;} .ds-cycle-options {display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; clear:both;} .ds-cycle-option {position:relative; cursor:pointer;} .ds-cycle-option input {position:absolute; width:100%; height:100%; margin:0; opacity:0; cursor:pointer; touch-action:manipulation;} .ds-cycle-option span {display:grid; place-items:center; min-height:52px; background:var(--background, #f5f7fa); border:2px solid transparent; border-radius:8px; font-size:1.25rem; font-weight:600;} .ds-cycle-option input:checked + span {color:var(--surface, #ffffff); background:var(--accent, #cc4c1a);} .ds-cycle-option input:hover:not(:disabled):not(:checked) + span {border-color:var(--border, #cbd4e0);} .ds-cycle-option input:focus-visible + span {outline:3px solid var(--focus, #174bc8); outline-offset:3px;} .ds-cycle-option input:disabled {cursor:not-allowed;} .ds-cycle-picker:disabled .ds-cycle-option span {opacity:.55;} .ds-cycle-picker:disabled .ds-cycle-option input:checked + span {opacity:1;} @media (max-width:359px) {.ds-cycle-picker {padding:12px;} .ds-cycle-options {gap:6px;}}"
+    },
+    {
+      "name": "Cronómetro plegado",
+      "kind": "custom",
+      "refersTo": "stopwatch-disclosure",
+      "description": "Fila inicial del cronómetro con tiempo visible y flecha de apertura; vista estática del control real.",
+      "html": "<div class=\"ds-stopwatch\"><button type=\"button\" class=\"ds-stopwatch-toggle\" aria-expanded=\"false\" aria-label=\"Mostrar cronómetro\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"14\" r=\"8\"/><path d=\"M12 10v4l3 2M9 2h6M12 2v4M18 6l2-2\"/></svg><span>Cronómetro</span><span class=\"ds-stopwatch-time\" role=\"timer\" aria-label=\"Tiempo transcurrido\">00:00.00</span><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m9 5 7 7-7 7\"/></svg></button></div>",
+      "css": ".ds-stopwatch {font-family: var(--font-geist-sans, Arial), sans-serif; line-height: 1.5;color:var(--foreground, #102542); border-top:1px solid var(--border, #cbd4e0); border-bottom:1px solid var(--border, #cbd4e0);} .ds-stopwatch-toggle {font-family: var(--font-geist-sans, Arial), sans-serif; line-height: 1.5;display:flex; align-items:center; gap:10px; width:100%; min-height:80px; padding:16px 0; border:0; text-align:left; border-radius:6px; font-size:1rem; font-weight:600; background:transparent; color:inherit; cursor:pointer; touch-action:manipulation;} .ds-stopwatch-toggle svg {flex-shrink:0;} .ds-stopwatch-toggle > svg:first-child {color:var(--muted, #526278); width:22px; height:22px;} .ds-stopwatch-toggle:hover {background:#edf1f7;} .ds-stopwatch-toggle:focus-visible {outline: 3px solid var(--focus, #174bc8); outline-offset: 4px;} .ds-stopwatch-time {margin-left:auto; font-size:1.125rem; font-weight:550; font-variant-numeric:tabular-nums; white-space:nowrap;} .ds-stopwatch-toggle > svg:last-child {width:16px; height:16px; color:var(--muted, #526278); transition:transform 180ms ease-out;} .ds-stopwatch-toggle[aria-expanded=\"true\"] > svg:last-child {transform:rotate(90deg);} @media (max-width:359px) {.ds-stopwatch-toggle {gap:8px; font-size:.9375rem;} .ds-stopwatch-time {font-size:1rem;}} @media (prefers-reduced-motion:reduce) {.ds-stopwatch-toggle > svg:last-child {transition:none;}}"
+    },
+    {
+      "name": "Acciones del cronómetro",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Par real de controles secundarios, con marcar vuelta deshabilitado en el estado inicial.",
+      "html": "<div class=\"ds-stopwatch-actions\"><button type=\"button\" class=\"ds-secondary\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m9 5 11 7-11 7z\"/></svg>Iniciar</button><button type=\"button\" class=\"ds-secondary\" disabled><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 21V4c5-4 9 4 14 0v10c-5 4-9-4-14 0\"/></svg>Marcar vuelta</button></div>",
+      "css": ".ds-stopwatch-actions {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px;} .ds-secondary {font-family: var(--font-geist-sans, Arial), sans-serif; line-height: 1.5;display:flex; align-items:center; justify-content:center; gap:8px; min-height:56px; padding:12px 8px; border:1px solid var(--border, #cbd4e0); border-radius:10px; color:var(--foreground, #102542); background:var(--surface, #ffffff); font-size:.9375rem; font-weight:600; cursor:pointer; touch-action:manipulation;} .ds-secondary svg {width:18px; height:18px; flex-shrink:0;} .ds-secondary:hover:not(:disabled) {border-color:var(--foreground, #102542); background:#eaf0f7;} .ds-secondary:active:not(:disabled) {background:#dae4ef;} .ds-secondary:disabled {color:#707d8f; background:var(--background, #f5f7fa); cursor:not-allowed;} .ds-secondary:focus-visible {outline: 3px solid var(--focus, #174bc8); outline-offset: 4px;} @media (max-width:359px) {.ds-secondary {gap:6px; font-size:.8125rem;}}"
+    },
+    {
+      "name": "Lectura de paladas",
+      "kind": "custom",
+      "refersTo": "measurement-readout",
+      "description": "Lectura inicial real: raya, unidad y estado en una posición estable, sin datos de muestra inventados.",
+      "html": "<div class=\"ds-readout\"><output class=\"ds-stroke-value\" aria-label=\"Paladas por minuto\">—</output><p class=\"ds-stroke-unit\">paladas / min</p><p class=\"ds-measurement-state\" role=\"status\"><span class=\"ds-state-dot\" aria-hidden=\"true\"></span>Listo para medir</p></div>",
+      "css": ".ds-readout {font-family: var(--font-geist-sans, Arial), sans-serif; line-height: 1.5;display:flex; flex-direction:column; align-items:center; padding:24px 0 28px; color:var(--foreground, #102542);} .ds-stroke-value {display:block; max-width:100%; font-size:6rem; line-height:1.1; font-weight:650; letter-spacing:-.04em; font-variant-numeric:tabular-nums;} .ds-stroke-unit {margin:6px 0 0; font-size:1.125rem; color:var(--muted, #526278);} .ds-measurement-state {display:flex; align-items:center; gap:8px; margin:16px 0 0; min-height:24px; font-size:.9375rem; color:var(--muted, #526278);} .ds-state-dot {width:7px; height:7px; border-radius:50%; background:currentColor;} .ds-measurement-state.ds-is-measuring {color:var(--stop, #9f302b); font-weight:600;} .ds-is-measuring .ds-state-dot {border-radius:1px;} .ds-has-result .ds-stroke-value {animation:ds-result-arrives 220ms ease-out;} @keyframes ds-result-arrives {from {color:var(--accent, #cc4c1a);} to {color:var(--foreground, #102542);}} @media (min-width:768px) {.ds-readout {padding:32px 0;}} @media (max-height:740px) and (max-width:767px) {.ds-readout {padding:16px 0 20px;} .ds-stroke-value {font-size:5rem;}} @media (prefers-reduced-motion:reduce) {.ds-has-result .ds-stroke-value {animation:none;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Hoja de regata",
+    "overview": "Una herramienta clara y sobria, inspirada en las planillas de resultados de regata. El fondo frío, la tinta azul y las superficies blancas sostienen una lectura rápida; el naranja concentra la acción de medir. La interfaz está en español y usa formas de control reconocibles, sin texturas ni imágenes decorativas.\n\nLa escala nace del uso con una mano y de mirar la pantalla de reojo. Los números tienen más peso que el entorno; las acciones tienen áreas amplias, texto directo e iconos de trazo. Los cambios de estado ocurren en posiciones estables, con movimiento breve y prescindible.",
+    "keyCharacteristics": [
+      "Fondo claro frío y tinta azul de alto contraste.",
+      "Cifras tabulares y resultado dominante.",
+      "Controles táctiles amplios, redondeados y sin sombras.",
+      "Naranja para iniciar y seleccionar; rojo oscuro para parar.",
+      "Animación breve de estado con respeto por movimiento reducido."
+    ],
+    "rules": [
+      {
+        "name": "The State Color Rule",
+        "body": "El naranja identifica inicio o selección; el rojo identifica la medición en curso y su acción de parada. Acompañar siempre el color con texto o forma de estado.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stable Digits Rule",
+        "body": "Resultados, tiempos y vueltas usan cifras tabulares; el cambio de valor no debe desplazar la lectura horizontal.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Separar con tono, espacio o línea; mantener los controles y grupos planos.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** mantener cifras tabulares y posiciones estables para resultados y tiempos.",
+      "**Do** conservar áreas amplias para medir, seleccionar ciclos y operar el cronómetro.",
+      "**Do** acompañar estados y disponibilidad con texto, forma y semántica accesible.",
+      "**Do** usar los colores normativos del frontmatter y el foco visible azul.",
+      "**Do** respetar movimiento reducido y reservar la animación para cambios de estado."
+    ],
+    "donts": [
+      "**Don't** agregar sombras a los controles o grupos planos.",
+      "**Don't** usar el naranja de selección para la acción de parada.",
+      "**Don't** reducir los controles a sus iconos o depender solo del color para explicar su estado."
+    ]
+  }
+}

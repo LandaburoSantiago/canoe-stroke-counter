@@ -3,19 +3,119 @@
 @tailwind utilities;
 
 :root {
-  --background: #f7f7f7;
-  --foreground: #171717;
+  color-scheme: light;
+  --background: #f5f7fa;
+  --foreground: #102542;
+  --surface: #ffffff;
+  --muted: #526278;
+  --border: #cbd4e0;
+  --accent: #cc4c1a;
+  --accent-hover: #b23d11;
+  --accent-soft: #fff0e9;
+  --stop: #9f302b;
+  --focus: #174bc8;
+  --radius: 14px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { -webkit-tap-highlight-color: transparent; }
+body { margin: 0; color: var(--foreground); background: var(--background); font-family: var(--font-geist-sans), Arial, sans-serif; font-size: 1rem; line-height: 1.5; }
+::selection { color: var(--foreground); background: #f8d5c5; }
+button, input, a { touch-action: manipulation; }
+button { font: inherit; cursor: pointer; }
+button, input, a, [tabindex="0"] { outline-offset: 4px; }
+button:focus-visible, a:focus-visible, [tabindex="0"]:focus-visible { outline: 3px solid var(--focus); }
+button:disabled { cursor: not-allowed; }
+button svg { flex-shrink: 0; }
+.app-shell { width: 100%; max-width: 524px; min-height: 100svh; margin: 0 auto; padding: 0 24px; }
+.app-header { display: flex; align-items: center; min-height: 88px; border-bottom: 1px solid var(--border); }
+.brand { display: flex; align-items: center; gap: 12px; font-size: 1.25rem; font-weight: 750; letter-spacing: -.025em; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; color: var(--surface); background: var(--accent); border-radius: 10px; }
+.training-tool { padding-top: 24px; }
+h1 { margin: 0; font-size: 1.25rem; line-height: 1.4; font-weight: 650; letter-spacing: -.02em; }
+.stroke-result { display: flex; flex-direction: column; align-items: center; padding: 24px 0 28px; }
+.stroke-value { display: block; max-width: 100%; font-size: 6rem; line-height: 1.1; font-weight: 650; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.stroke-unit { margin: 6px 0 0; font-size: 1.125rem; color: var(--muted); }
+.measurement-state { display: flex; align-items: center; gap: 8px; margin: 16px 0 0; min-height: 24px; font-size: .9375rem; color: var(--muted); }
+.state-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.is-measuring.measurement-state { color: var(--stop); font-weight: 600; }
+.is-measuring .state-dot { border-radius: 1px; }
+.has-result .stroke-value { animation: result-arrives 220ms ease-out; }
+@keyframes result-arrives { from { color: var(--accent); } to { color: var(--foreground); } }
+.cycle-picker { min-width: 0; margin: 0; padding: 16px; background: var(--surface); border-radius: var(--radius); }
+.cycle-picker legend { float: left; width: 100%; margin-bottom: 12px; font-size: .9375rem; font-weight: 550; }
+.cycle-options { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; clear: both; }
+.cycle-option { position: relative; cursor: pointer; }
+.cycle-option input { position: absolute; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.cycle-option span { display: grid; place-items: center; min-height: 52px; background: var(--background); border: 2px solid transparent; border-radius: 8px; font-size: 1.25rem; font-weight: 600; }
+.cycle-option input:checked + span { color: var(--surface); background: var(--accent); }
+.cycle-option input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 3px; }
+.cycle-option input:hover:not(:disabled):not(:checked) + span { border-color: var(--border); }
+.cycle-option input:disabled { cursor: not-allowed; }
+.cycle-picker:disabled .cycle-option span { opacity: .55; }
+.cycle-picker:disabled .cycle-option input:checked + span { opacity: 1; }
+.measurement-help { margin: 16px 0 24px; font-size: .875rem; color: var(--muted); min-height: 21px; }
+.measurement-error { margin: -8px 0 16px; color: var(--stop); font-size: .9375rem; }
+.measure-button { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 100px; padding: 20px 12px; border-radius: var(--radius); background: var(--accent); color: var(--surface); font-size: 1.5rem; font-weight: 650; transition: background-color 150ms ease-out; }
+.measure-button:hover { background: var(--accent-hover); }
+.measure-button:active { background: #96310b; }
+.measure-button.is-measuring { background: var(--stop); }
+.measure-button.is-measuring:hover { background: #842722; }
+.measure-button.is-measuring:active { background: #6c201c; }
+.reset-measurement, .stopwatch-reset { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; width: 100%; padding: 12px 8px; border-radius: 8px; font-size: .9375rem; font-weight: 500; }
+.reset-measurement { margin: 8px 0 16px; }
+.reset-measurement svg, .stopwatch-reset svg { width: 18px; height: 18px; }
+.reset-measurement:disabled, .stopwatch-reset:disabled { color: #707d8f; }
+.reset-measurement:hover:not(:disabled), .stopwatch-reset:hover:not(:disabled) { background: #e5ebf3; }
+.stopwatch { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.stopwatch h2 { margin: 0; }
+.stopwatch-toggle { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 80px; padding: 16px 0; text-align: left; border-radius: 6px; font-size: 1rem; font-weight: 600; }
+.stopwatch-toggle > svg:first-child { color: var(--muted); width: 22px; height: 22px; }
+.stopwatch-toggle:hover { background: #edf1f7; }
+.stopwatch-time { margin-left: auto; font-size: 1.125rem; font-weight: 550; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.chevron { width: 16px; height: 16px; color: var(--muted); transition: transform 180ms ease-out; }
+.chevron.is-open { transform: rotate(90deg); }
+.stopwatch-controls { padding-bottom: 16px; }
+.stopwatch-state { margin: 0 0 16px; color: var(--muted); font-size: .875rem; }
+.stopwatch-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.secondary-button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 56px; padding: 12px 8px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); font-size: .9375rem; font-weight: 600; }
+.secondary-button svg { width: 18px; height: 18px; }
+.secondary-button:hover:not(:disabled) { border-color: var(--foreground); background: #eaf0f7; }
+.secondary-button:active:not(:disabled) { background: #dae4ef; }
+.secondary-button:disabled { color: #707d8f; background: var(--background); }
+.stopwatch-reset { margin-top: 8px; }
+.lap-list { max-height: 272px; overflow: auto; scrollbar-color: #a3b2c5 var(--background); scrollbar-width: thin; }
+.lap-list table { width: 100%; font-size: .875rem; font-variant-numeric: tabular-nums; border-collapse: collapse; }
+.lap-list thead { position: sticky; top: 0; background: var(--background); }
+.lap-list th { font-weight: 500; }
+.lap-list th, .lap-list td { padding: 12px 4px; border-bottom: 1px solid var(--border); text-align: right; white-space: nowrap; }
+.lap-list tr > :first-child { text-align: left; }
+.lap-list thead th { color: var(--muted); font-size: .8125rem; }
+.app-footer { padding: 24px 0 max(24px, env(safe-area-inset-bottom)); text-align: center; font-size: .75rem; color: var(--muted); }
+.app-footer a { display: inline-block; padding: 8px 0; text-decoration: underline; text-underline-offset: 3px; }
+.app-footer a:hover { color: var(--foreground); }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media (min-width: 768px) {
+  .app-shell { padding: 0 32px; }
+  .app-header { min-height: 104px; }
+  .training-tool { padding-top: 32px; }
+  .stroke-result { padding: 32px 0; }
+}
+@media (max-width: 359px) {
+  .app-shell { padding: 0 16px; }
+  .cycle-picker { padding: 12px; }
+  .cycle-options { gap: 6px; }
+  .measure-button { font-size: 1.25rem; }
+  .stopwatch-toggle { gap: 8px; font-size: .9375rem; }
+  .stopwatch-time { font-size: 1rem; }
+  .secondary-button { gap: 6px; font-size: .8125rem; }
+}
+@media (max-height: 740px) and (max-width: 767px) {
+  .app-header { min-height: 72px; }
+  .training-tool { padding-top: 20px; }
+  .stroke-result { padding: 16px 0 20px; }
+  .stroke-value { font-size: 5rem; }
+  .measurement-help { margin-bottom: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
